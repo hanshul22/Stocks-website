@@ -1,0 +1,93 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    color: black;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.closeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 4px;
+    background: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 6px;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.newsList {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.modalContent h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+/* Custom Scrollbar */
+.modal::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Scrollbar for Firefox */
+.modal {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Styling the scrollbar track and thumb for Firefox */
+.modal::-moz-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal::-moz-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modal::-moz-scrollbar-thumb:hover {
+    background: #555;
+}
