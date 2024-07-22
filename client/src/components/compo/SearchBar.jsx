@@ -22,7 +22,7 @@ const SearchBar = ({ onSearch }) => {
   const fetchSuggestions = async (query) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/suggestions?q=${query}`
+        `${import.meta.env.VITE_BACKENDURI}/api/suggestions?q=${query}`
       );
       setSuggestions(response.data);
     } catch (error) {
