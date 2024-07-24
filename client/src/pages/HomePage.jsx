@@ -5,6 +5,7 @@ import SearchBar from "../components/compo/SearchBar";
 import StockCard from "../components/compo/StockCard";
 import NewsModal from "../components/compo/NewsModal";
 import styles from "./HomePage.module.css";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [stocks, setStocks] = useState([]);
@@ -25,7 +26,7 @@ const HomePage = () => {
 
     const fetchNews = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/news");
+        const response = await axios.get(`${import.meta.env.VITE_BACKENDURI}/api/news`);
         setNews(response.data);
       } catch (error) {
         console.error("Error fetching news:", error);
@@ -66,6 +67,9 @@ const HomePage = () => {
       transition={{ duration: 0.5 }}
     >
       <h1>Stock Analysis App</h1>
+      <Link to={"/ai-search"}>
+        <button className={styles.googleAi}>Ask suggestion from GoogleAI</button>
+      </Link>
       <SearchBar onSearch={setSearchQuery} />
       <motion.div className={styles.stockList} layout>
         {filteredStocks.map((stock) => (

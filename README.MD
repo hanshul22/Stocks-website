@@ -1,5 +1,5 @@
 DEPLOYED LINKS:
 
-Frontend: 
+Frontend: [stocks-website-git-main-hanshul22s-projects.vercel.app](https://stocks-website-git-main-hanshul22s-projects.vercel.app/)
 
-backendtend: 
+backendtend: [text](https://stocks-website.onrender.com)
